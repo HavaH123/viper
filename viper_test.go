@@ -30,7 +30,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/spf13/viper/internal/testutil"
+	"github.com/HavaH123/viper/internal/testutil"
 )
 
 var yamlExample = []byte(`Hacker: true
@@ -2055,7 +2055,6 @@ func TestParseNested(t *testing.T) {
 	}
 
 	type item struct {
-		Name   string
 		Delay  time.Duration
 		Nested duration
 	}

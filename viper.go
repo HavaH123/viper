@@ -999,7 +999,8 @@ func defaultDecoderConfig(output interface{}, opts ...DecoderConfigOption) *maps
 	c := &mapstructure.DecoderConfig{
 		Metadata:         nil,
 		Result:           output,
-		WeaklyTypedInput: true,
+		WeaklyTypedInput: false,
+		ErrorUnsetFields: true,
 		DecodeHook: mapstructure.ComposeDecodeHookFunc(
 			mapstructure.StringToTimeDurationHookFunc(),
 			mapstructure.StringToSliceHookFunc(","),
@@ -1874,7 +1875,7 @@ func (v *Viper) WatchRemoteConfigOnChannel() error {
 // Retrieve the first found remote configuration.
 func (v *Viper) getKeyValueConfig() error {
 	if RemoteConfig == nil {
-		return RemoteConfigError("Enable the remote features by doing a blank import of the viper/remote package: '_ github.com/spf13/viper/remote'")
+		return RemoteConfigError("Enable the remote features by doing a blank import of the viper/remote package: '_ github.com/HavaH123/viper/remote'")
 	}
 
 	for _, rp := range v.remoteProviders {
