@@ -3,6 +3,7 @@ module github.com/spf13/viper
 go 1.12
 
 require (
+	github.com/HavaH123/mapstructure v1.4.1-0.20201130152157-e49abaa6a595
 	github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c
 	github.com/coreos/bbolt v1.3.2 // indirect
 	github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e // indirect
@@ -18,7 +19,6 @@ require (
 	github.com/hashicorp/hcl v1.0.0
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/magiconair/properties v1.8.1
-	github.com/mitchellh/mapstructure v1.3.3
 	github.com/pelletier/go-toml v1.2.0
 	github.com/prometheus/client_golang v0.9.3 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
